@@ -1,0 +1,56 @@
+body{
+    font-family: Arial, sans-serif; /* 設定整個網頁的字型為 Arial，若無則使用系統預設的 sans-serif 字型 */
+    margin: 0;                      /* 移除瀏覽器預設的外邊距，讓內容緊貼視窗 */
+    padding: 0;                     /* 移除瀏覽器預設的內邊距 */
+    background: #f5f5f5;          /* 設定網頁背景顏色為淡灰色 */
+    color: #333;                  /* 設定文字顏色為深灰色，提升可讀性 */
+}
+
+header, nav, footer{
+    background-color: #78d2fc;    /* 設定頁首、導覽列、頁尾的背景顏色為淺藍色 */
+    color: white;                 /* 設定文字顏色為白色，與背景形成對比 */
+    padding: 1em;                   /* 增加內邊距，讓內容不會緊貼邊框 */
+    text-align: center;             /* 文字置中對齊 */
+}
+
+nav ul{
+    list-style: none;               /* 移除清單項目的預設符號（例如圓點） */
+    padding: 0;                     /* 移除清單的內邊距 */
+}
+
+nav ul li{
+    display: inline;                /* 將清單項目橫向排列，而不是垂直排列 */
+    margin: 0 1em;                  /* 在清單項目左右各加 1em 的間距 */
+}
+
+main{
+    padding: 2em;                   /* 設定主要內容區塊的內邊距，讓文字不緊貼邊框 */
+    background-color: white;      /* 設定主要內容區塊的背景顏色為白色 */
+    padding: 1em;                   /* 再次設定內邊距（此處會覆蓋上面的 2em，實際生效的是 1em） */
+    border-radius: 8px;             /* 設定主要內容區塊的邊角為圓角，增加美觀 */
+}
+
+.gallery{
+    display: flex;                  /* 使用 Flexbox 排版，讓圖片能自動排列 */
+    justify-content: space-between; /* 在圖片之間平均分配空間 */
+    gap:1em;                        /* 設定圖片之間的間距為 1em */
+    flex-wrap: wrap;                /* 當空間不足時，圖片會自動換行 */
+    margin-top: 1.5em;              /* 在畫廊區塊上方增加 1.5em 的外邊距 */
+}
+
+.gallery figure{
+    flex:1;                         /* 每個 figure 元素平均分配可用空間 */
+    text-align: center;             /* 將圖片與文字置中對齊 */
+}
+
+.gallery img{
+    width: 100%;                    /* 圖片寬度佔滿容器 */
+    height:auto;                    /* 高度自動調整，保持比例 */
+    border-radius: 15px;            /* 圖片邊角設為圓角，增加美觀 */
+}
+
+.gallery figcaption{
+    margin-top: 0.5em;              /* 在圖片說明文字上方增加 0.5em 的間距 */
+    font-size: 0.9em;               /* 設定文字大小稍微小於正常字體 */
+    color: #555;                  /* 設定文字顏色為中灰色，與主文字區分 */
+}
